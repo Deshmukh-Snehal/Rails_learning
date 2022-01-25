@@ -1,0 +1,59 @@
+<%= form_with(model: player, local: true) do |form| %>
+  <% if player.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(player.errors.count, "error") %> prohibited this player from being saved:</h2>
+
+      <ul>
+      <% player.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+    
+  </div>
+
+  <div class="field">
+    <%= form.label :states %>
+    <%= form.text_field :states %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Birth_Date %>
+    <%= form.date_field :dob, data:{ provide:'datepicker' } %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.text_field :age %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Gender" %>
+    male<%= form.radio_button :radiobutton, ['male']%>
+    female<%= form.radio_button :radiobutton, ['female']%>
+  </div>
+
+  <div class="field">
+    <%= form.label "Sports" %>
+    <%= form.collection_select(:sport_id, Sport.all, :id, :name, { :prompt => 'Select a Sport', :selected => @player.sport_id }, { class: 'form-control' }) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
