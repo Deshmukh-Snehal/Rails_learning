@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Calculatorrs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @calculatorrs.each do |calculatorr| %>
+      <tr>
+        <td><%= calculatorr.name %></td>
+        <td><%= link_to 'Show', calculatorr %></td>
+        <td><%= link_to 'Edit', edit_calculatorr_path(calculatorr) %></td>
+        <td><%= link_to 'Destroy', calculatorr, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Calculatorr', new_calculatorr_path %>

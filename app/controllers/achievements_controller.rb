@@ -1,6 +1,5 @@
 class AchievementsController < ApplicationController
   before_action :set_achievement, only: %i[ show edit update destroy ]
-
   # GET /achievements or /achievements.json
   def index
     @achievements = Achievement.all

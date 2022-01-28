@@ -1,0 +1,7 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  appoinment_details: 2022-01-27
+
+two:
+  appoinment_details: 2022-01-27

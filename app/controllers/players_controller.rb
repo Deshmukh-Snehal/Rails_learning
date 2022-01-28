@@ -1,6 +1,5 @@
 class PlayersController < ApplicationController
   before_action :set_player, only: %i[ show edit update destroy ]
-
   # GET /players or /players.json
   def index
     @players = Player.all

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Appoinmentinfo:</strong>
+  <%= @appoinmentinfo.appoinmentinfo %>
+</p>
+
+<p>
+  <strong>Doctor name:</strong>
+  <%= @appoinmentinfo.doctor_name %>
+</p>
+
+<p>
+  <strong>Player name:</strong>
+  <%= @appoinmentinfo.player_name %>
+</p>
+
+<%= link_to 'Edit', edit_appoinmentinfo_path(@appoinmentinfo) %> |
+<%= link_to 'Back', appoinmentinfos_path %>

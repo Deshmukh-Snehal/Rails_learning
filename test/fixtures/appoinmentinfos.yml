@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  appoinmentinfo: 2022-01-27
+  doctor_name: MyString
+  player_name: MyString
+
+two:
+  appoinmentinfo: 2022-01-27
+  doctor_name: MyString
+  player_name: MyString

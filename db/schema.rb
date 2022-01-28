@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_25_071843) do
+ActiveRecord::Schema.define(version: 2022_01_27_111508) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,50 @@ ActiveRecord::Schema.define(version: 2022_01_25_071843) do
     t.datetime "updated_at", null: false
     t.integer "player_id"
     t.index ["player_id"], name: "index_achievements_on_player_id"
+  end
+
+  create_table "appoinmentdetails", force: :cascade do |t|
+    t.date "appoinment_details"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "doctor_id"
+    t.integer "player_id"
+    t.index ["doctor_id"], name: "index_appoinmentdetails_on_doctor_id"
+    t.index ["player_id"], name: "index_appoinmentdetails_on_player_id"
+  end
+
+  create_table "appoinmentinfos", force: :cascade do |t|
+    t.date "appoinmentinfo"
+    t.string "doctor_name"
+    t.string "player_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "player_id"
+    t.integer "doctor_id"
+    t.index ["doctor_id"], name: "index_appoinmentinfos_on_doctor_id"
+    t.index ["player_id"], name: "index_appoinmentinfos_on_player_id"
+  end
+
+  create_table "appoinments", force: :cascade do |t|
+    t.datetime "appoinment_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "physician_id"
+    t.integer "players_id"
+    t.index ["physician_id"], name: "index_appoinments_on_physician_id"
+    t.index ["players_id"], name: "index_appoinments_on_players_id"
+  end
+
+  create_table "calculates", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "calculatorrs", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "coach_details", force: :cascade do |t|
@@ -43,6 +87,18 @@ ActiveRecord::Schema.define(version: 2022_01_25_071843) do
     t.string "country"
     t.string "email"
     t.bigint "age"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "doctors", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "physicians", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
