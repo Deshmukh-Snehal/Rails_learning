@@ -1,0 +1,17 @@
+<% if @register == true %>
+    <p>Your account is created</p>
+    <a href="<%= signin_path %>">Click here to login</a>
+<% elsif @register != nil %>
+     <p>Email already exist</p>
+<% end %>
+
+<h1>Sign up Form</h1>
+
+<form method="POST" action="<%= register_path %>">
+<%= token_tag %>
+<label for="username">Username</label>
+<input type="email" name="username" id="username" required>
+<label for="userpassword">Password</label>
+<input type="password" name="userpassword" id="userpassword" required>
+<input type="submit" value="register">
+</form>
