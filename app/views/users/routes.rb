@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :coachinfos
   root 'home#index'
   resources :appoinmentinfos
   resources :calculates

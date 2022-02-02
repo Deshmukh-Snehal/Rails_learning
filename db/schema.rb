@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_27_111508) do
+ActiveRecord::Schema.define(version: 2022_01_30_120805) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -91,6 +91,17 @@ ActiveRecord::Schema.define(version: 2022_01_27_111508) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "coachinfos", force: :cascade do |t|
+    t.string "name"
+    t.string "sportname"
+    t.bigint "age"
+    t.string "country"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "sport_id"
+    t.index ["sport_id"], name: "index_coachinfos_on_sport_id"
+  end
+
   create_table "doctors", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -118,9 +129,11 @@ ActiveRecord::Schema.define(version: 2022_01_27_111508) do
     t.boolean "gender_type"
     t.integer "genders_id"
     t.string "radiobutton"
+    t.string "sport_name"
     t.index ["achievement_id"], name: "index_players_on_achievement_id"
     t.index ["genders_id"], name: "index_players_on_genders_id"
     t.index ["sport_id"], name: "index_players_on_sport_id"
+    t.index ["sport_name"], name: "index_players_on_sport_name"
   end
 
   create_table "positions", force: :cascade do |t|

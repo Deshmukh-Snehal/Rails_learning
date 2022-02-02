@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+<table class="table table-striped table-bordered table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th>Name</th>
+      <th>Sports</th>
+      <th>Age</th>
+      <th>Country</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @coachinfos.each do |coachinfo| %>
+      <tr>
+        <td><%= coachinfo.name %></td>
+        <td><%= coachinfo.sport.name %></td>
+        <td><%= coachinfo.age %></td>
+        <td><%= coachinfo.country %></td>
+        <td><%= link_to 'Show', coachinfo %></td>
+        <td><%= link_to 'Edit', edit_coachinfo_path(coachinfo) %></td>
+        <td><%= link_to 'Destroy', coachinfo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Coach', new_coachinfo_path, class:"btn btn-secondary" %>

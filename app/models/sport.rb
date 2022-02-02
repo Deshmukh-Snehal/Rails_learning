@@ -1,6 +1,6 @@
 class Sport < ApplicationRecord
     has_many :player
-    has_one  :coach_detail
+    has_one  :coachinfo
     validate :name_validation
     private def name_validation
       if  (name=="")
