@@ -1,0 +1,38 @@
+<html >
+<head>
+    <title></title>
+    <script src="select_all.js"></script>
+</head>
+<body>
+    <form id="form1">
+    <label class='checkbox-inline'><input type='checkbox' class='checkbox-btn' value='1' name="check_list" id=check onchange='checkCount();'>1</label>
+    <label class='checkbox-inline'><input type='checkbox' class='checkbox-btn' value='2' name="check_list" id=check onchange='checkCount();'>2</label>
+    <label class='checkbox-inline'><input type='checkbox' class='checkbox-btn' value='3' name="check_list" id=check onchange='checkCount();'>3</label>
+    <label class='checkbox-inline'><input type='checkbox' class='checkbox-btn' value='4' name="check_list" id=check onchange='checkCount();'>4</label>
+    <label class='checkbox-inline'><input type='checkbox' class='checkbox-btn' value='5' name="check_list" id=check onchange='checkCount();'>5</label>
+    <label class='checkbox-inline'><input type='checkbox' class='checkbox-btn' value='6' name="check_list" id=check onchange='checkCount();'>6</label>
+    <label class='checkbox-inline'><input type='checkbox' class='checkbox-btn' value='7' name="check_list" id=check onchange='checkCount();'>7</label>
+    <label class='checkbox-inline'><input type='checkbox' class='checkbox-btn' value='8' name="check_list" id=check onchange='checkCount();'>8</label>
+    <label class='checkbox-inline'><input type='checkbox' class='checkbox-btn' value='9' name="check_list" id=check onchange='checkCount();'>9</label>
+    <label class='checkbox-inline'><input type='checkbox' class='checkbox-btn' value='10' name="check_list" id=check onchange='checkCount();'>10</label>
+    <label class='checkbox-inline'><input type='checkbox' class='checkbox-btn' value='11' name="check_list" id=check onchange='checkCount();'>11</label>
+    <label class='checkbox-inline'><input type='checkbox' class='checkbox-btn' value='12' name="check_list" id=check onchange='checkCount();'>12</label>
+    <label class='checkbox-inline'><input type='checkbox' class='checkbox-btn' value='13' name="check_list" id=check onchange='checkCount();'>13</label>
+    <label class='checkbox-inline'><input type='checkbox' class='checkbox-btn' value='14' name="check_list" id=check onchange='checkCount();'>14</label>
+    <label class='checkbox-inline'><input type='checkbox' class='checkbox-btn' value='15' name="check_list" id=check onchange='checkCount();'>15</label>
+    <label class='checkbox-inline'><input type='checkbox' class='checkbox-btn' value='16' name="check_list" id=check onchange='checkCount();'>16</label>
+    <label class='checkbox-inline'><input type='checkbox' class='checkbox-btn' value='17' name="check_list" id=check onchange='checkCount();'>17</label>
+    <label class='checkbox-inline'><input type='checkbox' class='checkbox-btn' value='18' name="check_list" id=check onchange='checkCount();'>18</label>
+    <label class='checkbox-inline'><input type='checkbox' class='checkbox-btn' value='19' name="check_list" id=check onchange='checkCount();'>19</label>
+    <label class='checkbox-inline'><input type='checkbox' class='checkbox-btn' value='20' name="check_list" id=check onchange='checkCount();'>20</label>
+    
+    <input type="text" name="proId" id="proId">
+<div>Total Selected : <span id="total">0</span></div>
+ <input type="button" name="Check_All" value="Check All" onClick="CheckAll(check_list)">
+<input type="button" name="Un_CheckAll" value="Uncheck All" onClick="UnCheckAll(check_list)">
+ <button type="button" value='Reset' id='but_reset' onclick='reset();'>Reset all</button> 
+<br/>
+    </form>
+</body>
+</html>
+

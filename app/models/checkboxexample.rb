@@ -1,0 +1,2 @@
+class Checkboxexample < ApplicationRecord
+end
