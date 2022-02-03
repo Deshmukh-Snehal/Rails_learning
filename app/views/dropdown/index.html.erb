@@ -1,24 +1,15 @@
 <html >
 <head>
     <title>Dropdown</title>
-    <script src="dropdown.js"></script>
+    <script src="drop.js"></script>
 </head>
 <body>
-<select Id="myDropdown">
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
+<select  id="ddselect" onchange="ddlselect();">
+   <option value="price1">Select city</option>
+   <option value="price1">Akole</option>
+   <option value="price2">Pune</option>
+   <option value="price3">Mumbai</option>
 </select>
-
-<input id="txtBox" type="text">
-
-    <%# <div align="center">
-        <select name="ddlContent" id="ddlContent" onchange="SelectedTextValue(this)">
-            <option selected="selected" value="">City</option>
-            <option value="1">Pune</option>
-            <option value="2">Mumbai</option>
-        </select>
-        <input name="txtContent" type="text" id="txtContent" />
-    </div> %>
+<input type="text" id="txtvalue" />
 </body>
 </html>
