@@ -1,0 +1,32 @@
+<%= form_with(model: appoinmentdetail, local: true) do |form| %>
+  <% if appoinmentdetail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(appoinmentdetail.errors.count, "error") %> prohibited this appoinmentdetail from being saved:</h2>
+
+      <ul>
+      <% appoinmentdetail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label "Doctors Name" %>
+    <%= form.collection_select(:doctor_id, Doctor.all, :id, :name, { :prompt => 'Select a Doctor', :selected => @appoinmentdetail.doctor_id }, { class: 'form-control' }) %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Player Name" %>
+    <%= form.collection_select(:player_id, Player.all, :id, :name, { :prompt => 'Select a Player', :selected => @appoinmentdetail.player_id }, { class: 'form-control' }) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :appoinment_details %>
+    <%= form.date_select :appoinment_details %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

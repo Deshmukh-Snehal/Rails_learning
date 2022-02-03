@@ -1,0 +1,22 @@
+<%= form_with(model: calculatorr, local: true) do |form| %>
+  <% if calculatorr.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(calculatorr.errors.count, "error") %> prohibited this calculatorr from being saved:</h2>
+
+      <ul>
+      <% calculatorr.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

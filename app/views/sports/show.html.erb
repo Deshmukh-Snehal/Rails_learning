@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sport.name %>
+</p>
+
+<p>
+  <strong>Equipments:</strong>
+  <%= @sport.equipments %>
+</p>
+
+<p>
+  <strong>Players:</strong>
+  <%= @sport.players %>
+</p>
+
+<%= link_to 'Edit', edit_sport_path(@sport), class:"btn btn-secondary" %>
+<%= link_to 'Back', sports_path, class:"btn btn-dark" %>

@@ -1,0 +1,37 @@
+<%= form_with(model: coachinfo, local: true) do |form| %>
+  <% if coachinfo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(coachinfo.errors.count, "error") %> prohibited this coachinfo from being saved:</h2>
+
+      <ul>
+      <% coachinfo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label "Sports" %>
+    <%= form.collection_select(:sport_id, Sport.all, :id, :name, { :prompt => 'Select a Sport', :selected => @coachinfo.sport_id }, { class: 'form-control' }) %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :age %>
+    <%= form.text_field :age, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :country %>
+    <%= form.text_field :country, class:"form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class:"btn btn-secondary"%>
+  </div>
+<% end %>

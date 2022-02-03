@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Position name:</strong>
+  <%= @position.Position_name %>
+</p>
+
+<%= link_to 'Edit', edit_position_path(@position), class:"btn btn-secondary" %>
+<%= link_to 'Back', positions_path, class:"btn btn-dark" %>

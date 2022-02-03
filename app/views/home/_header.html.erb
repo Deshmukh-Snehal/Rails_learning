@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<%= link_to 'GamesApp', root_path, class:"navbar-brand" %>
+  <a class= href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <%= link_to 'Sports', sports_path, class:"nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Players', players_path, class:"nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Coach', coachinfos_path, class:"nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Position', new_position_path, class:"nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Achievements', new_achievement_path, class:"nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Doctor', new_doctor_path, class:"nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Appoinment', new_appoinmentinfo_path, class:"nav-link" %>
+      </li>
+    </ul>
+  </div>
+</nav>
