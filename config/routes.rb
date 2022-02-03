@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'jqueryvalidation/index'
   get 'dropdown/index'
   root 'checkboxeg#index'
   resources :checkboxes

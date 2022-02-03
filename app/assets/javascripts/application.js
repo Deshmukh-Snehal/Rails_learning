@@ -15,3 +15,4 @@
 //= require turbolinks
 //= require_tree .
 //= require select_all.js
+//= require dropdown.js

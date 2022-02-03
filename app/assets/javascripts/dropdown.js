@@ -1,4 +1,5 @@
-$("#ddlModel").on("change", function() {
-    var GetValue = $("#ddlModel").val();
-    $("#myTextbox").val(GetValue);
-});
+function jsFunction() {
+    // set text box value here
+    var txt = document.getElementById('txtBox');
+    txt.value = "assign_here";
+}
