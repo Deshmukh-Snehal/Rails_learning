@@ -17,6 +17,7 @@
  *= require 'plugins/bootstrap-datepicker.min'
  *= require 'plugins/bootstrap-datepicker.min'
  *= require 'style'
+ *= require 'mystyle'
  *= require_tree .
  *= require_self
  */

@@ -11,9 +11,11 @@
 // about supported directives.
 //
 
+//= require jquery
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require myjavascript
 //= require plugins/Chart.min
 //= require plugins/bootstrap-datepicker.min
 //= require plugins/jquery.flot
