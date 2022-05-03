@@ -15,6 +15,8 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require datatables
+//= require user
 //= require myjavascript
 //= require plugins/Chart.min
 //= require plugins/bootstrap-datepicker.min

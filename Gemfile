@@ -63,7 +63,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # devise gem
 gem 'devise', '~> 4.8'
-
+# Jquery
 gem 'jquery-rails'
 # Carrierwave
 gem 'carrierwave', '~> 2.0'
+# Datatable gem
+gem 'jquery-datatables'

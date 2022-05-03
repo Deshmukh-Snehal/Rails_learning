@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+<h1>Songs</h1>
+<table class="table table-striped" id="songTable">
+  <thead class="table-dark">
+    <tr>
+      <th>Song Image</th>
+      <th>Song Name</th>
+      <th>Show</th>
+      <% if current_user.admin? %>
+        <th>Edit</th>
+        <th>Destroy</th>
+      <% end %>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @songs.each do |song| %>
+        <tr>
+          <td><%= song.image %></td>
+          <td><%= song.name%></td>
+          <td><%= link_to 'Show', song %></td>
+          <% if ((song.user == current_user) || (current_user.admin?)) %>
+            <td><%= link_to 'Edit', edit_song_path(song) %></td>
+            <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<% if ((song.user == current_user) || (current_user.admin?)) %>
+  <%= link_to 'Upload New Song', new_song_path, class:"btn btn-primary" %>
+<% end %>

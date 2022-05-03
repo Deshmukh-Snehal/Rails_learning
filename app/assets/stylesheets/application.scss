@@ -19,5 +19,8 @@
  *= require 'style'
  *= require 'mystyle'
  *= require_tree .
+ *= require datatables
  *= require_self
  */
+
+@import "datatables";
