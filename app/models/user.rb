@@ -5,6 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :confirmable
 
    # Enum role for users      
-   enum role: [:user,:admin]
+   enum role: [:user, :admin]
   # mount_uploader :image, ImageUploader
 end

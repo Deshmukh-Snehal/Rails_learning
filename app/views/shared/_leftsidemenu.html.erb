@@ -19,12 +19,14 @@
       </a>
     </li>
     <% if user_signed_in? %>
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">
-          <i class="mdi mdi-home menu-icon"></i>
-          <span class="menu-title">Home</span>
-        </a>
-      </li>
+      <% if current_user.admin?%>
+        <li class="nav-item">
+          <a class="nav-link" href="<%= home_index_path %>">
+            <i class="mdi mdi-home menu-icon"></i>
+            <span class="menu-title">Home</span>
+          </a>
+        </li>
+      <% end %>
       <li class="nav-item">
         <a class="nav-link" href="pages/icons/mdi.html">
           <i class="mdi mdi-magnify menu-icon"></i>
